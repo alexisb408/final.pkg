@@ -8,10 +8,17 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+```{r}
+devtools::install_github("alexisb408/final.pkg")
+```
 
-
-My R package will manipulate the surveys data.
+This tutorial will manipulate the surveys data.
 It will remove NA values, generate plots, manipulate a selected column of data, and generate an lm.
 
 
-
+```{r, eval=FALSE}
+#install.packages("googlesheets4")
+library(googlesheets4)
+googlesheets4::gs4_deauth()
+surveys <- read_sheet("https://docs.google.com/spreadsheets/d/1PXMHBXOe_L0GZV_qeJWMZEXgxMWJ_BdxIHlTBKYhzMc/edit?usp=sharing")
+```
