@@ -1,16 +1,24 @@
-#' Generate a plot of weight versus sex
+#' Generate a plot of an independent variable versus dependent variable
 #' 
-#' Use the surveys dataset to generate a plot of weight versus sex.
-#' Returns a plot of weight versus sex.
+#' Use the surveys dataset to generate a point graph of an independent variable versus a dependent variable.
+#' Returns a point graph of an independent variable versus a dependent variable.
 #' 
-#' @param data Dataset
-#' @param sex Sex of the species
-#' @param weight Weight of the organism
-#' @return gp3 Plot of weight versus sex
+#' @param df data set
+#' @param independent independent variable
+#' @param dependent dependent variable 
+#' @return pg graph of independent variable versus dependent variable
 #' 
 #' @export
 
-graph_project_3 <- function(data, sex, weight){
-  gp3 <- ggplot(data = surveys_1, mapping = aes(x = sex, y = weight)) + geom_point()
-  return(gp3)
+point_graph <- function(df, independent, dependent) {
+      column <- df %>% 
+          na.omit() %>% 
+          select({{independent}})
+      if(sum(column) > 0) {
+              print(df)
+              pg <- ggplot(df, mapping = aes(x = {{independent}}, y = {{dependent}})) + geom_point()
+              return(pg)
+          } else {
+              print("STOP!!")
+              }
 }

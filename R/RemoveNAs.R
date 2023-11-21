@@ -1,18 +1,17 @@
-#' Remove NA values from a data set
+#' Removes NA values from a data set
 #' 
-#' Remove NA values from a specific column in a data set.
-#' Returns a data set containing no NA values.
+#' Removes NA values from a specific column in a data set.
+#' Returns a column from a data set containing no NA values.
 #' 
-#' @param data Dataset
-#' @param hindfoot_length Hind foot length of an organism
-#' @return rna_p3 Selected column from a data set containing no NA values
+#' @param data data set
+#' @param column a column from a data set
+#' @return clean selected column from a data set containing no NA values
 #' 
 #' @export
 #'
-remove_nas_p3 <- function(data, hindfoot_length){
-  rna_p3 <- data %>% 
-    na.omit(data) %>% 
-    select(hindfoot_length) %>% 
-    mutate(is.numeric(hindfoot_length))
-  return(rna_p3)
-}    
+remove_nas_p3 <- function(data, column){
+     clean <- data %>% 
+         na.omit(data) %>% 
+         select(all_of(column)) 
+     return(clean)
+} 
