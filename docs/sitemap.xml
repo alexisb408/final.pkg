@@ -19,6 +19,9 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/bar_graph.html</loc>
+  </url>
+  <url>
     <loc>/reference/calc_den.html</loc>
   </url>
   <url>
@@ -26,6 +29,15 @@
   </url>
   <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/lm_function.html</loc>
+  </url>
+  <url>
+    <loc>/reference/multiply_variable.html</loc>
+  </url>
+  <url>
+    <loc>/reference/point_graph.html</loc>
   </url>
   <url>
     <loc>/reference/remove_nas_p3.html</loc>
