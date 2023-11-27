@@ -8,13 +8,29 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+# Introduction to My R Packaget: final.pkg
+
+This R package will analyze surveys data. This package contains functions that will allow users to clean a particular data set, generate various different graphs with data of their choosing, add new columns of data, and determine relationships between two or more selected variables.
+
+## How to Install My R Package: final.pkg
+
+To install final.pkg, copy and paste the following code into your console.
+
 ```{r}
 devtools::install_github("alexisb408/final.pkg")
 ```
 
-This tutorial will manipulate the surveys data.
-It will remove NA values, generate plots, manipulate a selected column of data, and generate an lm.
+## Installing Other Packages
 
+```{r}
+install.packages("tidyverse")
+install.packages("broom")
+```
+
+## How to Download the Data Used in this Package
+
+First, click on the "Upload files to server" button located in the "Files" tab of the R window. Select the .csv file containing the surveys data. To make this data usable in R, copy and paste the following codes into your console individually.
 
 ```{r, eval=FALSE}
 #install.packages("googlesheets4")
@@ -22,3 +38,151 @@ library(googlesheets4)
 googlesheets4::gs4_deauth()
 surveys <- read_sheet("https://docs.google.com/spreadsheets/d/1PXMHBXOe_L0GZV_qeJWMZEXgxMWJ_BdxIHlTBKYhzMc/edit?usp=sharing")
 ```
+
+## Functions in this Package and Examples
+
+There are a total of five functions in this R package. In this section, you will learn both the purpose of each function as well as how to use each function.
+
+### Function 1: Cleaning Data
+
+This first function cleans a selected column from a particular data set of your choosing by removing any unwanted values, specifically NA values. These unwanted values can interfere with any calculations or plots you may generate using your data set, so it is best to remove these values before moving forward.
+
+The name of this function is **remove_nas_p3()**. To utilize this function, copy and paste the following code into your console.
+
+```{r}
+remove_nas_p3 <- function(data, column){
+     clean <- data %>% 
+         na.omit(data) %>% 
+         select(all_of(column)) 
+     return(clean)
+} 
+```
+
+After you have done this, type the function title into your console followed by the data set of your choosing and a column from the data set in quotation marks. An example is shown below.
+
+```{r}
+remove_nas_p3(surveys, "weight")
+```
+
+If the function worked properly, a column consisting of no NA values should have been returned.
+
+### Function 2: Creating a New Column
+
+The second function multiplies a selected column from a data set of your choosing by two and generates a new column containing these new variables. This gives users the ability to generate different results with their data, including calculations, plots, etc., that could not have been done before.
+
+The name of this function is **multiply_variable()**. To utilize this function, copy and paste the following code into your console.
+
+```{r}
+multiply_variable <- function(df, variable) {
+  column <- df %>% 
+    na.omit() %>% 
+    select({{variable}})
+  if(sum(column) > 0) {
+    new <- df %>% 
+      na.omit() %>% 
+      mutate(new_column = 2 * {{variable}}) 
+    return(new)
+  } else {
+    print("STOP")
+  }
+}
+```
+
+After you have done this, type the function title into your console followed by the data set of your choosing and a column from the data set. An example is shown below.
+
+```{r}
+multiply_variable(surveys, hindfoot_length)
+```
+
+If the function worked properly, a chart consisting of your selected data set should have appeared with the new column containing the multiplied variables at the end.
+
+### Function 3: Plotting a Bar Graph
+
+This third function will generate a bar graph consisting of a selected column from a data set of your choosing. It may be beneficial for you to construct a graph of your data in order to better visualize trends and consistencies that may be difficult to determine by just looking at the values.
+
+The name of this function is **bar_graph()**. To utilize this function, copy and paste the following code into your console.
+
+```{r}
+bar_graph <- function(df, independent) {
+  column_1 <- df %>% 
+    na.omit() %>% 
+    select({{independent}})
+  if(sum(column_1) > 0) {
+    print(df)
+    bg <- ggplot(df, mapping = aes(x = {{independent}})) + geom_bar()
+    return(bg)
+  } else {
+    print("STOP!!")
+  }
+}
+```
+
+After you have done this, type the function title into your console followed by the data set of your choosing and a column from the data set. An example is shown below.
+
+```{r}
+bar_graph(surveys, independent = weight)
+```
+
+If the function worked properly, a bar graph displaying the values from the selected data of your choosing should have appeared in a window on the right side of your screen.
+
+### Function 4: Plotting a Point Graph
+
+This fourth function will generate a point graph displaying two selected columns of data from a data set of your choosing. It may be beneficial for you to construct a graph plotting two variables against each other. By doing so, you may be able to better visualize trends in your data as well as see how well one variable influences another.
+
+The name of this function is **point_graph()**. To utilize this function, copy and paste the following code into your console.
+
+```{r}
+point_graph <- function(df, independent, dependent) {
+      column <- df %>% 
+          na.omit() %>% 
+          select({{independent}})
+      if(sum(column) > 0) {
+              print(df)
+              pg <- ggplot(df, mapping = aes(x = {{independent}}, y = {{dependent}})) + geom_point()
+              return(pg)
+          } else {
+              print("STOP!!")
+              }
+}
+```
+
+After you have done this, type the function title into your console followed by the data set of your choosing and two columns from the data set. Make sure to define which variable is independent and which variable is dependent. An example is shown below.
+
+```{r}
+point_graph(surveys, independent = weight, dependent = hindfoot_length)
+```
+
+If the function worked properly, a point graph displaying the variables from the selected data of your choosing should have appeared in a window on the right side of your screen.
+
+### Function 5: Comparing Two or More Variables
+
+The fifth and final function in this package will generate a summary that determines how well an independent variable affects one or more dependent variables. This will allow you to determine how weak or strong the relationship between two or more of your variables is.
+
+The name of this function is **lm_function()**. To utilize this function, copy and paste the following code into your console.
+
+```{r}
+lm_function <- function(data, independent, dependent) {
+     clean_data <- data %>% 
+         na.omit() 
+     model <- clean_data %>% 
+         na.omit() %>% 
+         select(a = {{independent}}, {{dependent}}) %>% 
+         lm(a ~ ., data = .) %>% 
+         summary()
+     if(sum(is.na(clean_data)) == 0){
+         return(model)
+     } else {
+         print("STOP")
+     }
+ }
+```
+
+After you have done this, type the function title into your console followed by the data set of your choosing and two columns from the data set in quotation marks. Make sure to put the independent variable first and the dependent variable second. An example is shown below.
+
+```{r}
+lm_function(surveys, "weight", "hindfoot_length")
+```
+
+If the function worked properly, a summary comparing two or more of your selected variables should have appeared.
+
+## THE END!!!
