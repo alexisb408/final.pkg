@@ -72,7 +72,7 @@
                         <h4 data-toc-skip class="author">Alexis
 Broussard</h4>
             
-            <h4 data-toc-skip class="date">2023-11-21</h4>
+            <h4 data-toc-skip class="date">2023-11-27</h4>
       
       
       <div class="hidden name"><code>SurveysTutorial.Rmd</code></div>
@@ -98,14 +98,9 @@ console.</p>
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"alexisb408/final.pkg"</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## Using github PAT from envvar GITHUB_PAT</span></span></code></pre>
 <pre><code><span><span class="co">## Downloading GitHub repo alexisb408/final.pkg@HEAD</span></span></code></pre>
-<pre><code><span><span class="co">## stringi (1.7.12 -&gt; 1.8.1) [CRAN]</span></span>
-<span><span class="co">## stringr (1.5.0  -&gt; 1.5.1) [CRAN]</span></span>
-<span><span class="co">## dplyr   (1.1.3  -&gt; 1.1.4) [CRAN]</span></span></code></pre>
-<pre><code><span><span class="co">## Installing 3 packages: stringi, stringr, dplyr</span></span></code></pre>
-<pre><code><span><span class="co">## Installing packages into '/tmp/RtmpCeF0j7/temp_libpath12f1d09949c'</span></span>
-<span><span class="co">## (as 'lib' is unspecified)</span></span></code></pre>
-<pre><code><span><span class="co">## <span style="color: #00BBBB;">──</span> <span style="color: #00BBBB;">R CMD build</span> <span style="color: #00BBBB;">─────────────────────────────────────────────────────────────────</span></span></span>
-<span><span class="co">## * checking for file ‘/tmp/Rtmp5C6YLx/remotesa3f32e641e8/alexisb408-final.pkg-f9ee650/DESCRIPTION’ ... OK</span></span>
+<pre><code><span><span class="co">## </span></span>
+<span><span class="co">## <span style="color: #00BBBB;">──</span> <span style="color: #00BBBB;">R CMD build</span> <span style="color: #00BBBB;">─────────────────────────────────────────────────────────────────</span></span></span>
+<span><span class="co">## * checking for file ‘/tmp/RtmpooR9Bh/remotesfd03e796b4b/alexisb408-final.pkg-e22c59a/DESCRIPTION’ ... OK</span></span>
 <span><span class="co">## * preparing ‘final.pkg’:</span></span>
 <span><span class="co">## * checking DESCRIPTION meta-information ... OK</span></span>
 <span><span class="co">## * checking for LF line-endings in source and make files and shell scripts</span></span>
@@ -113,38 +108,299 @@ console.</p>
 <span><span class="co">## Removed empty directory ‘final.pkg/broussard.pkg’</span></span>
 <span><span class="co">## * building ‘final.pkg_0.1.tar.gz’</span></span>
 <span><span class="co">## Warning: invalid uid value replaced by that for user 'nobody'</span></span></code></pre>
-<pre><code><span><span class="co">## Installing package into '/tmp/RtmpCeF0j7/temp_libpath12f1d09949c'</span></span>
+<pre><code><span><span class="co">## Installing package into '/tmp/RtmpajmRUB/temp_libpathe055fe5fb4b'</span></span>
 <span><span class="co">## (as 'lib' is unspecified)</span></span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="installing-other-packages">Installing Other Packages<a class="anchor" aria-label="anchor" href="#installing-other-packages"></a>
 </h3>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## Installing package into '/tmp/RtmpCeF0j7/temp_libpath12f1d09949c'</span></span>
-<span><span class="co">## (as 'lib' is unspecified)</span></span></code></pre>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"broom"</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## Installing package into '/tmp/RtmpCeF0j7/temp_libpath12f1d09949c'</span></span>
-<span><span class="co">## (as 'lib' is unspecified)</span></span></code></pre>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#install.packages("tidyverse")</span></span>
+<span><span class="co">#install.packages("broom")</span></span></code></pre></div>
 </div>
 <div class="section level3">
-<h3 id="how-to-download-data-used-in-package">How to Download Data Used in Package<a class="anchor" aria-label="anchor" href="#how-to-download-data-used-in-package"></a>
+<h3 id="how-to-download-the-data-used-in-this-package">How to Download the Data Used in this Package<a class="anchor" aria-label="anchor" href="#how-to-download-the-data-used-in-this-package"></a>
 </h3>
 <p>First, click on the “Upload files to server” button located in the
 “Files” tab of the R window. Select the .csv file containing the surveys
 data. To make this data usable in R, copy and paste the following codes
 into your console individually.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#install.packages("googlesheets4")</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://googlesheets4.tidyverse.org" class="external-link">googlesheets4</a></span><span class="op">)</span></span>
 <span><span class="fu">googlesheets4</span><span class="fu">::</span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/gs4_deauth.html" class="external-link">gs4_deauth</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">surveys</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1PXMHBXOe_L0GZV_qeJWMZEXgxMWJ_BdxIHlTBKYhzMc/edit?usp=sharing"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## <span style="color: #00BB00;">✔</span> Reading from <span style="color: #00BBBB;">surveys</span>.</span></span></code></pre>
+<pre><code><span><span class="co">## <span style="color: #00BB00;">✔</span> Range <span style="color: #BBBB00;">surveys</span>.</span></span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="functions-in-this-package-and-examples">Functions in this Package and Examples<a class="anchor" aria-label="anchor" href="#functions-in-this-package-and-examples"></a>
 </h3>
-<p>##Function 1: Cleaning Data</p>
+<p>There are a total of five functions in this R package. In this
+section, you will learn both the purpose of each function as well as how
+to use each function.</p>
+<div class="section level4">
+<h4 id="function-1-cleaning-data">Function 1: Cleaning Data<a class="anchor" aria-label="anchor" href="#function-1-cleaning-data"></a>
+</h4>
+<p>This first function cleans a selected column from a particular data
+set of your choosing by removing any unwanted values, specifically NA
+values. These unwanted values can interfere with any calculations or
+plots you may generate using your data set, so it is best to remove
+these values before moving forward.</p>
+<p>The name of this function is <strong>remove_nas_p3()</strong>. To
+utilize this function, copy and paste the following code into your
+console.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">remove_nas_p3</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">data</span>, <span class="va">column</span><span class="op">)</span><span class="op">{</span></span>
+<span>     <span class="va">clean</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>         <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>         <span class="fu">select</span><span class="op">(</span><span class="fu">all_of</span><span class="op">(</span><span class="va">column</span><span class="op">)</span><span class="op">)</span> </span>
+<span>     <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">clean</span><span class="op">)</span></span>
+<span><span class="op">}</span> </span></code></pre></div>
+<p>After you have done this, type the function title into your console
+followed by the data set of your choosing and a column from the data set
+in quotation marks. An example is shown below.</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">final.pkg</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## </span></span>
+<span><span class="co">## Attaching package: 'final.pkg'</span></span></code></pre>
+<pre><code><span><span class="co">## The following object is masked _by_ '.GlobalEnv':</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">##     remove_nas_p3</span></span></code></pre>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## ── <span style="font-weight: bold;">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──</span></span>
+<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">dplyr    </span> 1.1.4     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">readr    </span> 2.1.4</span></span>
+<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">forcats  </span> 1.0.0     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">stringr  </span> 1.5.1</span></span>
+<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">ggplot2  </span> 3.4.4     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tibble   </span> 3.2.1</span></span>
+<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">lubridate</span> 1.9.3     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tidyr    </span> 1.3.0</span></span>
+<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">purrr    </span> 1.0.2</span></span></code></pre>
+<pre><code><span><span class="co">## ── <span style="font-weight: bold;">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
+<span><span class="co">## <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">filter()</span> masks <span style="color: #0000BB;">stats</span>::filter()</span></span>
+<span><span class="co">## <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">lag()</span>    masks <span style="color: #0000BB;">stats</span>::lag()</span></span>
+<span><span class="co">## <span style="color: #00BBBB;">ℹ</span> Use the conflicted package (<span style="color: #0000BB; font-style: italic;">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors</span></span></code></pre>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/remove_nas_p3.html">remove_nas_p3</a></span><span class="op">(</span><span class="va">surveys</span>, <span class="st">"weight"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 40 × 1</span></span></span>
+<span><span class="co">##    weight</span></span>
+<span><span class="co">##     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 1</span>     40</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 2</span>     48</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 3</span>     29</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 4</span>     46</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 5</span>     36</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 6</span>     52</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 7</span>      8</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 8</span>     22</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 9</span>     35</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">10</span>      7</span></span>
+<span><span class="co">## <span style="color: #949494;"># ℹ 30 more rows</span></span></span></code></pre>
+<p>If the function worked properly, a column consisting of no NA values
+should have been returned.</p>
+</div>
+<div class="section level4">
+<h4 id="function-2-creating-a-new-column">Function 2: Creating a New Column<a class="anchor" aria-label="anchor" href="#function-2-creating-a-new-column"></a>
+</h4>
+<p>The second function multiplies a selected column from a data set of
+your choosing by two and generates a new column containing these new
+variables. This gives users the ability to generate different results
+with their data, including calculations, plots, etc., that could not
+have been done before.</p>
+<p>The name of this function is <strong>multiply_variable()</strong>. To
+utilize this function, copy and paste the following code into your
+console.</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">multiply_variable</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span>, <span class="va">variable</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">column</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="op">{</span><span class="op">{</span><span class="va">variable</span><span class="op">}</span><span class="op">}</span><span class="op">)</span></span>
+<span>  <span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">column</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">new</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>      <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>      <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>new_column <span class="op">=</span> <span class="fl">2</span> <span class="op">*</span> <span class="op">{</span><span class="op">{</span><span class="va">variable</span><span class="op">}</span><span class="op">}</span><span class="op">)</span> </span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">new</span><span class="op">)</span></span>
+<span>  <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="st">"STOP"</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p>After you have done this, type the function title into your console
+followed by the data set of your choosing and a column from the data
+set. An example is shown below.</p>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/multiply_variable.html">multiply_variable</a></span><span class="op">(</span><span class="va">surveys</span>, <span class="va">hindfoot_length</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 40 × 10</span></span></span>
+<span><span class="co">##    record_id month   day  year plot_id species_id sex   hindfoot_length weight</span></span>
+<span><span class="co">##        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 1</span>        63     8    19  <span style="text-decoration: underline;">1</span>977       3 DM         M                  35     40</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 2</span>        64     8    19  <span style="text-decoration: underline;">1</span>977       7 DM         M                  37     48</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 3</span>        65     8    19  <span style="text-decoration: underline;">1</span>977       4 DM         F                  34     29</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 4</span>        66     8    19  <span style="text-decoration: underline;">1</span>977       4 DM         F                  35     46</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 5</span>        67     8    19  <span style="text-decoration: underline;">1</span>977       7 DM         M                  35     36</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 6</span>        68     8    19  <span style="text-decoration: underline;">1</span>977       8 DO         F                  32     52</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 7</span>        69     8    19  <span style="text-decoration: underline;">1</span>977       2 PF         M                  15      8</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 8</span>        70     8    19  <span style="text-decoration: underline;">1</span>977       3 OX         F                  21     22</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 9</span>        71     8    19  <span style="text-decoration: underline;">1</span>977       7 DM         F                  36     35</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">10</span>        74     8    19  <span style="text-decoration: underline;">1</span>977       8 PF         M                  12      7</span></span>
+<span><span class="co">## <span style="color: #949494;"># ℹ 30 more rows</span></span></span>
+<span><span class="co">## <span style="color: #949494;"># ℹ 1 more variable: new_column &lt;dbl&gt;</span></span></span></code></pre>
+<p>If the function worked properly, a chart consisting of your selected
+data set should have appeared with the new column containing the
+multiplied variables at the end.</p>
+</div>
+<div class="section level4">
+<h4 id="function-3-plotting-a-bar-graph">Function 3: Plotting a Bar Graph<a class="anchor" aria-label="anchor" href="#function-3-plotting-a-bar-graph"></a>
+</h4>
+<p>This third function will generate a bar graph consisting of a
+selected column from a data set of your choosing. It may be beneficial
+for you to construct a graph of your data in order to better visualize
+trends and consistencies that may be difficult to determine by just
+looking at the values.</p>
+<p>The name of this function is <strong>bar_graph()</strong>. To utilize
+this function, copy and paste the following code into your console.</p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">bar_graph</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span>, <span class="va">independent</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">column_1</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="op">{</span><span class="op">{</span><span class="va">independent</span><span class="op">}</span><span class="op">}</span><span class="op">)</span></span>
+<span>  <span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">column_1</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
+<span>    <span class="va">bg</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">df</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="op">{</span><span class="op">{</span><span class="va">independent</span><span class="op">}</span><span class="op">}</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">bg</span><span class="op">)</span></span>
+<span>  <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="st">"STOP!!"</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p>After you have done this, type the function title into your console
+followed by the data set of your choosing and a column from the data
+set. An example is shown below.</p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bar_graph.html">bar_graph</a></span><span class="op">(</span><span class="va">surveys</span>, independent <span class="op">=</span> <span class="va">weight</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 151 × 9</span></span></span>
+<span><span class="co">##    record_id month   day  year plot_id species_id sex   hindfoot_length weight</span></span>
+<span><span class="co">##        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 1</span>         1     7    16  <span style="text-decoration: underline;">1</span>977       2 NL         M                  32     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 2</span>         2     7    16  <span style="text-decoration: underline;">1</span>977       3 NL         M                  33     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 3</span>         3     7    16  <span style="text-decoration: underline;">1</span>977       2 DM         F                  37     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 4</span>         4     7    16  <span style="text-decoration: underline;">1</span>977       7 DM         M                  36     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 5</span>         5     7    16  <span style="text-decoration: underline;">1</span>977       3 DM         M                  35     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 6</span>         6     7    16  <span style="text-decoration: underline;">1</span>977       1 PF         M                  14     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 7</span>         7     7    16  <span style="text-decoration: underline;">1</span>977       2 PE         F                  <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 8</span>         8     7    16  <span style="text-decoration: underline;">1</span>977       1 DM         M                  37     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 9</span>         9     7    16  <span style="text-decoration: underline;">1</span>977       1 DM         F                  34     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">10</span>        10     7    16  <span style="text-decoration: underline;">1</span>977       6 PF         F                  20     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #949494;"># ℹ 141 more rows</span></span></span></code></pre>
+<pre><code><span><span class="co">## Warning: Removed 110 rows containing non-finite values (`stat_count()`).</span></span></code></pre>
+<p><img src="SurveysTutorial_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
+<p>If the function worked properly, a bar graph displaying the values
+from the selected data of your choosing should have appeared in a window
+on the right side of your screen.</p>
+</div>
+<div class="section level4">
+<h4 id="function-4-plotting-a-point-graph">Function 4: Plotting a Point Graph<a class="anchor" aria-label="anchor" href="#function-4-plotting-a-point-graph"></a>
+</h4>
+<p>This fourth function will generate a point graph displaying two
+selected columns of data from a data set of your choosing. It may be
+beneficial for you to construct a graph plotting two variables against
+each other. By doing so, you may be able to better visualize trends in
+your data as well as see how well one variable influences another.</p>
+<p>The name of this function is <strong>point_graph()</strong>. To
+utilize this function, copy and paste the following code into your
+console.</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">point_graph</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span>, <span class="va">independent</span>, <span class="va">dependent</span><span class="op">)</span> <span class="op">{</span></span>
+<span>      <span class="va">column</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>          <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="op">{</span><span class="op">{</span><span class="va">independent</span><span class="op">}</span><span class="op">}</span><span class="op">)</span></span>
+<span>      <span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">column</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span>              <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
+<span>              <span class="va">pg</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">df</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="op">{</span><span class="op">{</span><span class="va">independent</span><span class="op">}</span><span class="op">}</span>, y <span class="op">=</span> <span class="op">{</span><span class="op">{</span><span class="va">dependent</span><span class="op">}</span><span class="op">}</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>              <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">pg</span><span class="op">)</span></span>
+<span>          <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>              <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="st">"STOP!!"</span><span class="op">)</span></span>
+<span>              <span class="op">}</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p>After you have done this, type the function title into your console
+followed by the data set of your choosing and two columns from the data
+set. Make sure to define which variable is independent and which
+variable is dependent. An example is shown below.</p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/point_graph.html">point_graph</a></span><span class="op">(</span><span class="va">surveys</span>, independent <span class="op">=</span> <span class="va">weight</span>, dependent <span class="op">=</span> <span class="va">hindfoot_length</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 151 × 9</span></span></span>
+<span><span class="co">##    record_id month   day  year plot_id species_id sex   hindfoot_length weight</span></span>
+<span><span class="co">##        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 1</span>         1     7    16  <span style="text-decoration: underline;">1</span>977       2 NL         M                  32     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 2</span>         2     7    16  <span style="text-decoration: underline;">1</span>977       3 NL         M                  33     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 3</span>         3     7    16  <span style="text-decoration: underline;">1</span>977       2 DM         F                  37     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 4</span>         4     7    16  <span style="text-decoration: underline;">1</span>977       7 DM         M                  36     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 5</span>         5     7    16  <span style="text-decoration: underline;">1</span>977       3 DM         M                  35     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 6</span>         6     7    16  <span style="text-decoration: underline;">1</span>977       1 PF         M                  14     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 7</span>         7     7    16  <span style="text-decoration: underline;">1</span>977       2 PE         F                  <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 8</span>         8     7    16  <span style="text-decoration: underline;">1</span>977       1 DM         M                  37     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 9</span>         9     7    16  <span style="text-decoration: underline;">1</span>977       1 DM         F                  34     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">10</span>        10     7    16  <span style="text-decoration: underline;">1</span>977       6 PF         F                  20     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #949494;"># ℹ 141 more rows</span></span></span></code></pre>
+<pre><code><span><span class="co">## Warning: Removed 111 rows containing missing values (`geom_point()`).</span></span></code></pre>
+<p><img src="SurveysTutorial_files/figure-html/unnamed-chunk-11-1.png" width="700"></p>
+<p>If the function worked properly, a point graph displaying the
+variables from the selected data of your choosing should have appeared
+in a window on the right side of your screen.</p>
+</div>
+<div class="section level4">
+<h4 id="function-5-comparing-two-or-more-variables">Function 5: Comparing Two or More Variables<a class="anchor" aria-label="anchor" href="#function-5-comparing-two-or-more-variables"></a>
+</h4>
+<p>The fifth and final function in this package will generate a summary
+that determines how well an independent variable affects one or more
+dependent variables. This will allow you to determine how weak or strong
+the relationship between two or more of your variables is.</p>
+<p>The name of this function is <strong>lm_function()</strong>. To
+utilize this function, copy and paste the following code into your
+console.</p>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">lm_function</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">data</span>, <span class="va">independent</span>, <span class="va">dependent</span><span class="op">)</span> <span class="op">{</span></span>
+<span>     <span class="va">clean_data</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>         <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="op">)</span> </span>
+<span>     <span class="va">model</span> <span class="op">&lt;-</span> <span class="va">clean_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>         <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>         <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span>a <span class="op">=</span> <span class="op">{</span><span class="op">{</span><span class="va">independent</span><span class="op">}</span><span class="op">}</span>, <span class="op">{</span><span class="op">{</span><span class="va">dependent</span><span class="op">}</span><span class="op">}</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>         <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">a</span> <span class="op">~</span> <span class="va">.</span>, data <span class="op">=</span> <span class="va">.</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>         <span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>     <span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">clean_data</span><span class="op">)</span><span class="op">)</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span><span class="op">{</span></span>
+<span>         <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
+<span>     <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>         <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="st">"STOP"</span><span class="op">)</span></span>
+<span>     <span class="op">}</span></span>
+<span> <span class="op">}</span></span></code></pre></div>
+<p>After you have done this, type the function title into your console
+followed by the data set of your choosing and two columns from the data
+set in quotation marks. Make sure to put the independent variable first
+and the dependent variable second. An example is shown below.</p>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/lm_function.html">lm_function</a></span><span class="op">(</span><span class="va">surveys</span>, <span class="st">"weight"</span>, <span class="st">"hindfoot_length"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## </span></span>
+<span><span class="co">## Call:</span></span>
+<span><span class="co">## lm(formula = a ~ ., data = .)</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## Residuals:</span></span>
+<span><span class="co">##      Min       1Q   Median       3Q      Max </span></span>
+<span><span class="co">## -12.6561  -2.9390   0.4174   2.9875  17.3439 </span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## Coefficients:</span></span>
+<span><span class="co">##                 Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
+<span><span class="co">## (Intercept)     -10.4578     3.5257  -2.966  0.00519 ** </span></span>
+<span><span class="co">## hindfoot_length   1.4098     0.1086  12.978 1.54e-15 ***</span></span>
+<span><span class="co">## ---</span></span>
+<span><span class="co">## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## Residual standard error: 5.704 on 38 degrees of freedom</span></span>
+<span><span class="co">## Multiple R-squared:  0.8159, Adjusted R-squared:  0.8111 </span></span>
+<span><span class="co">## F-statistic: 168.4 on 1 and 38 DF,  p-value: 1.536e-15</span></span></code></pre>
+<p>If the function worked properly, a summary comparing two or more of
+your selected variables should have appeared.</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="the-end">THE END!!!<a class="anchor" aria-label="anchor" href="#the-end"></a>
+</h3>
 </div>
 </div>
   </div>
